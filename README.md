@@ -1,6 +1,6 @@
 ## Challenges
 
-For study, i created the repository to do challenges.
+For study, i created the repository to make someone challenges.
 
 ### Companies
 
