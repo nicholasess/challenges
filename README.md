@@ -12,5 +12,5 @@ For study, i created the repository to make someone challenges.
 - [ ] [Backend](https://github.com/entria/jobs/blob/master/backend/challenge.md)
 - [ ] [Fullstack](https://github.com/entria/jobs/blob/master/fullstack/challenge.md)
 
-### Lfe Challenges
+### Lfeh Challenges
 - [Reference](https://github.com/LFeh/frontend-challenges) 
