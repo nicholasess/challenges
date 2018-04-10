@@ -7,9 +7,10 @@ const route = require("koa-route");
 const compress = require("koa-compress");
 const app = new Koa();
 const Controller = require("./controller");
+var bodyParser = require("koa-bodyparser");
 
 app.use(logger());
-
+app.use(bodyParser());
 app.use(route.get("/", Controller.get));
 app.use(route.post("/", Controller.post));
 app.use(route.put("/", Controller.put));
@@ -17,14 +18,17 @@ app.use(route.delete("/", Controller.delete));
 
 app.use(compress());
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("Server Ok");
+});
 
-//Set up default mongoose connection
-var mongoDB = "mongodb://127.0.0.1/my_database";
-mongoose.connect(mongoDB);
+mongoose.connect("mongodb://127.0.0.1/my_database");
 
-//Get the default connection
-var db = mongoose.connection;
-
-//Bind connection to error event (to get notification of connection errors)
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+let db = mongoose.connection;
+db.on("error", console.error.bind(console, "Erro de conexão ao DB!!!"));
+db.once(
+  "open",
+  (callback = () => {
+    console.log("MongoDB on");
+  })
+);
