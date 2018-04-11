@@ -21,9 +21,13 @@ module.exports = {
       title: { type: new graphql.GraphQLNonNull(graphql.GraphQLString) },
       _id: { type: new graphql.GraphQLNonNull(graphql.GraphQLString) }
     },
-    resolve: async (_, { title }) => {
-      const newitem = new Model({ title: title });
-      return await newitem.save();
+    resolve: async (_, { _id, title }) => {
+      const data = await Model.update(
+        { _id: _id },
+        { $set: { title: title } }
+      ).exec();
+
+      return { title: "ok" };
     }
   },
   delete: {
@@ -32,9 +36,9 @@ module.exports = {
     args: {
       _id: { type: new graphql.GraphQLNonNull(graphql.GraphQLString) }
     },
-    resolve: async (_, { title }) => {
-      const newitem = new Model({ title: title });
-      return await newitem.save();
+    resolve: async (_, { _id }) => {
+      await Model.remove({ _id: _id }).exec();
+      return { title: "ok" };
     }
   }
 };
