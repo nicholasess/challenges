@@ -8,6 +8,7 @@ const compress = require("koa-compress");
 const app = new Koa();
 const Controller = require("./controller");
 var bodyParser = require("koa-bodyparser");
+const graphqlHTTP = require("koa-graphql");
 
 app.use(logger());
 app.use(bodyParser());

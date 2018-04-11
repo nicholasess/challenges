@@ -12,10 +12,13 @@
     "babel-core": "^6.25.0",
     "babel-polyfill": "^6.23.0",
     "bluebird": "^3.5.0",
+    "graphql": "^0.13.2",
     "koa": "^2.0.0-alpha.8",
     "koa-bodyparser": "^4.2.0",
     "koa-compress": "^2.0.0",
+    "koa-graphql": "^0.7.5",
     "koa-logger": "^3.0.1",
+    "koa-mount": "^3.0.0",
     "koa-route": "^3.2.0",
     "koajs": "^1.0.0",
     "mongoose": "4.10.8"
