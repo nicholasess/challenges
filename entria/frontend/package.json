@@ -20,7 +20,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-nunjucks": "^2.2.3",
-    "nunjucks": "^3.1.2",
+    "nunjucks": "^3.2.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-loadable": "^4.0.5",
