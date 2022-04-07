@@ -21,7 +21,7 @@
     "koa-mount": "^3.0.0",
     "koa-route": "^3.2.0",
     "koajs": "^1.0.0",
-    "mongoose": "4.10.8"
+    "mongoose": "5.7.3"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
