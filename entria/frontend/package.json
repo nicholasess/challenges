@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -20,11 +22,13 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-nunjucks": "^2.2.3",
-    "nunjucks": "^3.1.2",
+    "nunjucks": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-loadable": "^4.0.5",
     "react-router-dom": "^4.2.2",
-    "styled-components": "^3.2.5"
-  }
+    "styled-components": "^3.2.5",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
